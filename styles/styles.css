@@ -75,7 +75,7 @@ header .navbar li a:hover {
     font-size: 1.3rem;
 }
 
-.section {
+.myinformations {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
@@ -85,7 +85,7 @@ header .navbar li a:hover {
     margin-left: 100px;
 }
 
-.section div {
+.myinformations div {
     animation: inicializar .7s forwards;
     margin-top: 25px;
     align-self: start;
@@ -93,7 +93,7 @@ header .navbar li a:hover {
     gap: 10px;
 }
 
-.section #Alex img {
+.myinformations #Alex img {
 
     width: 280px;
     height: 280px;
@@ -104,17 +104,17 @@ header .navbar li a:hover {
     margin-left: 50px;
 }
 
-.section div h2 {
+.myinformations div h2 {
     color: #4BF4EF;
     font-weight: 600;
 }
 
-.section div p {
+.myinformations div p {
     color: #f7f7f7;
     font-weight: 200;
 }
 
-.section div button {
+.myinformations div button {
     background-color: #8854e8;
     cursor: pointer;
     border: 40px;
@@ -128,7 +128,7 @@ header .navbar li a:hover {
 
 
 
-.section .botoes {
+.myinformations .botoes {
     display: flex;
     align-items: center;
 
@@ -328,7 +328,7 @@ footer {
     gap: 20px;
 }
 
-footer h1{
+footer h1 {
     text-align: center;
     color: #4BF4EF;
 }
@@ -348,19 +348,19 @@ footer h1{
     border: 1px solid #4BF4EF;
 }
 
-.footer_sociais li i{
+.footer_sociais li i {
     padding: 30px;
     font-size: 1.5rem;
 }
 
-.footer_sociais li:hover{
+.footer_sociais li:hover {
     transition: .3s ease-in-out;
     cursor: pointer;
     background-color: #180439;
 
 }
 
-.footer_sociais::before{
+.footer_sociais::before {
     content: '';
     height: 5px;
     position: absolute;
@@ -471,30 +471,32 @@ footer .footer_comercial {
 
     }
 
-    .section {
-        display: grid;
-        grid-template-columns: 1fr;
+    
+    .myinformations {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 0px;
+        margin-left: 0;
+        height: 100%;
+        
     }
-
+    
     .background {
-        height: 70vh;
+        height: 90vh;
     }
 
-    .section #Alex img {
+    .myinformations #Alex img {
         display: none;
     }
 
-    .sobre-info{
+    .sobre-info {
         display: flex;
         flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
         gap: 15px;
     }
 
-
-
 }
+
