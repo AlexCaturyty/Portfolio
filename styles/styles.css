@@ -9,16 +9,13 @@
     font-family: Inter;
     text-decoration: none;
     color: white;
-
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
 /*Css body da imagem*/
-
 
 .background {
     background-image: url("/img/Galaxia.jpg");
@@ -27,7 +24,6 @@ html {
     max-width: 100%;
     height: 90vh;
 }
-
 
 /*header estilizado*/
 
@@ -47,7 +43,6 @@ header {
 header h1 {
     color: aliceblue;
     font-size: 2.5rem;
-
 }
 
 /*Navbar estilizado, texto lado a lado*/
@@ -61,7 +56,6 @@ header .navbar {
 /*Estilizando texto da nav*/
 
 header .navbar li a {
-
     padding: 10px;
     color: white;
     font-size: 1.3rem;
@@ -70,7 +64,6 @@ header .navbar li a {
 /*Navbar estilizado, com o hover*/
 
 header .navbar li a:hover {
-
     padding: 10px;
     color: #4BF4EF;
     font-size: 1.3rem;
@@ -95,7 +88,6 @@ header .navbar li a:hover {
 }
 
 .myinformations #Alex img {
-
     width: 280px;
     height: 280px;
     border: 4px solid transparent;
@@ -124,18 +116,12 @@ header .navbar li a:hover {
     font-weight: 600;
     height: 50px;
     width: 100px;
-
 }
-
-
 
 .myinformations .botoes {
     display: flex;
     align-items: center;
-
-
 }
-
 
 @keyframes inicializar {
     from {
@@ -156,7 +142,6 @@ main {
     background: linear-gradient(150deg, #180439, #332A66);
 }
 
-
 main .sobre {
 
     display: grid;
@@ -164,14 +149,12 @@ main .sobre {
     gap: 30px;
     justify-content: center;
     padding: 40px;
-
 }
 
 .titulo {
     margin: 30px 0;
     grid-column: 1/-1;
     text-align: center;
-
 }
 
 .titulo h1 {
@@ -185,7 +168,6 @@ main .sobre {
     margin-bottom: 1px;
     color: #4BF4EF;
 }
-
 
 .sobre img {
     animation: fotoAbout .6s ease-in-out forwards;
@@ -207,7 +189,6 @@ main .sobre {
     display: grid;
     color: #4BF4EF;
     grid-template-columns: 1fr 1fr;
-
 }
 
 .texto-sobre-mim {
@@ -249,15 +230,11 @@ main .sobre {
     display: inline-block;
     padding-right: 15px;
 
-
-
-
 }
 
 .sobre-info p {
     font-size: 1.4rem;
     margin-left: 5px;
-
 }
 
 /* MY PROJECTS */
@@ -269,7 +246,6 @@ main .sobre {
     justify-content: center;
     gap: 30px;
     background: linear-gradient(370deg, #180439, #332A66);
-
 }
 
 .projects h1 {
@@ -288,10 +264,9 @@ main .sobre {
     background-color: #332A66;
     border: 1px solid #4BF4EF;
     padding: 6px 20px;
-
 }
 
-.projects_armazenamentos ul {
+.projects_armazenamentos_web ul {
     display: grid;
     margin-top: 60px;
     gap: 20px;
@@ -299,12 +274,12 @@ main .sobre {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.projects_armazenamentos ul li {
+.projects_armazenamentos_web ul li {
     max-width: 100%;
     height: 100%;
 }
 
-.projects_armazenamentos ul li img {
+.projects_armazenamentos_web ul li img {
     max-width: 100%;
     height: 100%;
     border-radius: 4px;
@@ -314,8 +289,12 @@ main .sobre {
 .projects a {
     background-color: #332A66;
     padding: 20px 40px;
-
 }
+
+.projects_armazenamentos  {
+    display: none;
+}
+
 
 
 /* FOOTER */
@@ -399,11 +378,6 @@ footer .footer_comercial {
     }
 }
 
-
-
-
-
-
 @media (min-width: 992px) {
     header .fa-bars {
         display: none;
@@ -431,13 +405,8 @@ footer .footer_comercial {
         color: #4BF4EF;
         font-size: 1.3rem;
     }
-
-
+    
 }
-
-
-
-
 
 @media (max-width: 992px) {
     .sobre img {
@@ -472,7 +441,6 @@ footer .footer_comercial {
 
     }
 
-    
     .myinformations {
         display: flex;
         flex-direction: column;
@@ -480,14 +448,12 @@ footer .footer_comercial {
         align-items: center;
         margin-left: 0;
         height: 100%;
-        
+
     }
 
-    
-    
     .background {
         height: 90vh;
-        
+
     }
 
     .myinformations #Alex img {
@@ -502,19 +468,115 @@ footer .footer_comercial {
         gap: 15px;
     }
 
+    .projects_armazenamentos_web{
+        display: none;
+    }
+
+    .projects_armazenamentos{
+        display: block;
+    }
+    /* Adicione essas novas classes para o slideshow */
+    .projects_armazenamentos .slideshow-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 170px;
+    }
+
+    .projects_armazenamentos .slide {
+        display: none;
+    }
+
+    /* Mostra a primeira imagem por padrão */
+    .projects_armazenamentos .slide:first-child {
+        display: block;
+    }
+
+    /* Estiliza as imagens do carrossel */
+    .projects_armazenamentos .slide img {
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    /* Adicione as animações */
+    .projects_armazenamentos .slide {
+        animation: fadeInOut 4s ease infinite;
+    }
+
+    /* Defina as animações de entrada e saída */
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .projects_armazenamentos {
+        position: relative;
+    }
+
+    .projects_armazenamentos .prev,
+    .projects_armazenamentos .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        color: rgb(168, 168, 168);
+        outline: none;
+    }
+
+    .projects_armazenamentos .prev {
+        left: 10px;
+
+    }
+
+    .projects_armazenamentos .next {
+        right: 10px;
+    }
+
+    .projects_armazenamentos .slideshow-container .slide img {
+    display: block;
+
+}
+
+.projects_armazenamentos .slideshow-container .slide a {
+    background: none;
+
+}
+
 }
 
 @media (max-width: 992px) and (orientation: landscape) {
-header{
-    height: 50px;
-}
-
-    .myinformations h2{
-        
+    header {
+        height: 50px;
     }
-    .myinformations .myinformations2{
-     display: flex;
-        
-    }
-}
 
+    .myinformations .myinformations2 {
+        display: flex;
+
+    }
+
+    .projects_armazenamentos .slideshow-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+    }
+
+}
