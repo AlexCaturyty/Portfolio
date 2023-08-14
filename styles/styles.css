@@ -18,7 +18,7 @@ html {
 /*Css body da imagem*/
 
 .background {
-    background-image: url("/img/Galaxia.jpg");
+    background-image: url("/img/Galaxia.webp");
     background-size: cover;
     background-position: center;
     max-width: 100%;
@@ -475,7 +475,6 @@ footer .footer_comercial {
     .projects_armazenamentos{
         display: block;
     }
-    /* Adicione essas novas classes para o slideshow */
     .projects_armazenamentos .slideshow-container {
         position: relative;
         overflow: hidden;
@@ -487,24 +486,21 @@ footer .footer_comercial {
         display: none;
     }
 
-    /* Mostra a primeira imagem por padrão */
     .projects_armazenamentos .slide:first-child {
         display: block;
     }
 
-    /* Estiliza as imagens do carrossel */
     .projects_armazenamentos .slide img {
         max-width: 100%;
         height: auto;
 
     }
 
-    /* Adicione as animações */
     .projects_armazenamentos .slide {
         animation: fadeInOut 4s ease infinite;
     }
 
-    /* Defina as animações de entrada e saída */
+    
     @keyframes fadeInOut {
         0% {
             opacity: 0;
