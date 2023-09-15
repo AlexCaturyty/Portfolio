@@ -26,7 +26,7 @@ ativaMenu.addEventListener('click', ()=>{
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
-  const slideInterval = 4000; // Tempo de transição entre os slides em milissegundos
+  const slideInterval = 4000; 
 
   function showSlide(n) {
     slides.forEach(slide => slide.style.display = "none");
@@ -43,18 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }
 
-  // Adicione a funcionalidade para os botões de navegação
   document.querySelector(".prev").addEventListener("click", prevSlide);
   document.querySelector(".next").addEventListener("click", nextSlide);
 
-  // Inicie o carrossel
   showSlide(currentSlide);
 
-  // Defina o intervalo para avançar automaticamente
   setInterval(nextSlide, slideInterval);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  var projectsList = document.querySelector('.projects_armazenamentos_web ul .menos');
+  var buttonText = document.getElementById('lerMais');
+  var visibleItems = Array.from(projectsList.children).slice(0, 1); 
 
+  visibleItems.forEach(function(item) {
+      item.classList.remove('hidden');
+  });
+
+  document.getElementById('lerMais').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      if (projectsList.classList.contains('hidden')) {
+          projectsList.classList.remove('hidden');
+          buttonText.textContent = 'Mostrar menos';
+      } else {
+          projectsList.classList.add('hidden');
+          buttonText.textContent = 'Carregar mais...';
+      }
+  });
+});
 
   
   

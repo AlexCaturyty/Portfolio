@@ -268,10 +268,19 @@ main .sobre {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.projects_armazenamentos_web ul .menos.hidden {
+    display: none;
+}
+
+
+
 .projects_armazenamentos_web ul li {
     max-width: 100%;
     height: 100%;
 }
+
+
+
 
 .projects_armazenamentos_web ul li img {
     max-width: 100%;
